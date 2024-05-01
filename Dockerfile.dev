@@ -1,0 +1,13 @@
+FROM node:alpine AS development
+
+ENV NODE_ENV development
+
+WORKDIR /zania
+
+COPY ./package*.json /zania
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm","start]
