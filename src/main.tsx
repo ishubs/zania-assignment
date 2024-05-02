@@ -5,9 +5,7 @@ import './index.css'
 const { worker } = await import('./mocks/browser')
 
 async function enableMocking() {
-  if (process.env.NODE_ENV !== 'development') {
-    return
-  }
+
 
   return worker.start()
 }

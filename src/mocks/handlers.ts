@@ -21,7 +21,7 @@ export const handlers = [
     const { docs } = await request.json()
 
     localStorage.setItem('zania_docs', JSON.stringify(docs))
-    
+
     return HttpResponse.json(docs)
   }),
   
